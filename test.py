@@ -92,16 +92,17 @@ class TestUser(unittest.TestCase):
         '''
         self.new_credentials.save_credentials()
         self.assertEqual(len(credentials.credentials_list),1)
-    def test_save_multiple_credentials(self):
+    
+    def test_delete_credentials(self):
         '''
-        test case to test if we can save multiple credentials into the credentials_list
+        test case to test if we can delete credentials from the credentials_list
         '''
         self.new_credentials.save_credentials()
         test_credentials = credentials("test","testname","987654321")
         test_credentials.save_credentials()
 
-        self.assertEqual(len(credentials.credentials_list),2)
-    
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(credentials.credentials_list),1)
     def test_find_credentials_by_platform_name(self):
         '''
         test case to test if we can search for credentials in the credentials_list by the platform_name and display
