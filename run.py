@@ -121,7 +121,7 @@ def main():
         elif shrt_code == "ex":
             print(f"Bye")
         else:
-            print
+            print('you did not use the short_code!!!')
 
 
 
