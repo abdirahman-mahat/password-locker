@@ -47,7 +47,7 @@ def main():
     print(f'hello {platform_name} what do you want to acess?')
     print('\n')
     while True:
-        print('Use these short codes: sp - save password, gp - generate password, cp - copy password, dp - display passwords, fp - find passwords')
+        print('Use these short codes: sp - save password, gp - generate password, cp - copy password, dp - display passwords, fp - find passwords, ex - exit ')
         short_code = input().lower()
         if short_code == 'sp':
             print ('new user')
@@ -118,8 +118,8 @@ def main():
             else:
                 print("You do not have any passwords yet")
                 print("--"*10)
-        elif shrt_code == "ex":
-            print(f"Bye")
+        elif short_code == "ex":
+            exit()
         else:
             print('you did not use the short_code!!!')
 
