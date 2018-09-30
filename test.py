@@ -86,13 +86,16 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_credentials.platform_name,"twitter")
         self.assertEqual(self.new_credentials.user_name,"billowbashir")
         self.assertEqual(self.new_credentials.password,"123456789")
-    def test_save_credentials(self):
+   
+    def test_save_multiple_credentials(self):
         '''
-        test case to test if the object is saved into the credentials_list
+        test case to test if we can save multiple credentials into the credentials_list
         '''
         self.new_credentials.save_credentials()
-        self.assertEqual(len(credentials.credentials_list),1)
-    
+        test_credentials = credentials("test","testname","987654321")
+        test_credentials.save_credentials()
+
+        self.assertEqual(len(credentials.credentials_list),2)
     def test_delete_credentials(self):
         '''
         test case to test if we can delete credentials from the credentials_list
