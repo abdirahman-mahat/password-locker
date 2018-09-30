@@ -30,7 +30,7 @@ PasswordLocker is a python application that generates and saves passwords for va
 # Support and Contacts
 * email me at abdirahmanmahat3@gmail.com
 ***
-# License abd Copyright
+# License and Copyright
 MIT License
 
 Copyright (c) 2018 Manka-Mehdi
