@@ -97,7 +97,16 @@ def main():
                 print('/n')
                 print('you dont seem to have the user saved yet')
                 print('\n')
-        
+        elif short_code == 'fp':
+            print('enter the platform you want to search for')
+            search_platform_name = input()
+            if check_existing_user(search_platform_name):
+                search_platform_name = find_user(search_platform_name)
+                print(f'{search_platform_name.username}{search_platform_name.name}')
+                print('-'*20)
+                print(f'password is {search_platform_name.password}')
+            else:
+                print('the user does not exist')
         elif short_code =="cp":
             print("Enter the user name of  password you want to copy")
             user_found = input()
@@ -109,6 +118,10 @@ def main():
             else:
                 print("You do not have any passwords yet")
                 print("--"*10)
+        elif shrt_code == "ex":
+            print(f"Bye")
+        else:
+            print
 
 
 
