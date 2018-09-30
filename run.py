@@ -107,17 +107,7 @@ def main():
                 print(f'password is {search_platform_name.password}')
             else:
                 print('the user does not exist')
-        elif short_code =="cp":
-            print("Enter the user name of  password you want to copy")
-            user_found = input()
-            if check_existing_user(user_found):
-                user_found = User.find_by_username(user_found)
-                pyperclip.copy(user_found.password)
-                print("\n")
-                print(f"Password is successfully copied to clipboard, go ahead and paste it")
-            else:
-                print("You do not have any passwords yet")
-                print("--"*10)
+        
 
 
 
