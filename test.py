@@ -101,17 +101,16 @@ class TestUser(unittest.TestCase):
         test_credentials.save_credentials()
 
         self.assertEqual(len(credentials.credentials_list),2)
-    def test_delete_credentials(self):
+    
+    def test_find_credentials_by_platform_name(self):
         '''
-        test case to test if we can delete credentials from the credentials_list
+        test case to test if we can search for credentials in the credentials_list by the platform_name and display
         '''
-        self.new_credentials.save_credentials()
         test_credentials = credentials("test","testname","987654321")
         test_credentials.save_credentials()
 
-        self.new_credentials.delete_credentials()
-        self.assertEqual(len(credentials.credentials_list),1)
-    
+        found_credential=credentials.find_credentials_by_platform_name("test")
+        self.assertEqual(found_credential.username,test_credentials.user_name)
     def test_credentials_exists(self):
         '''
         test case to test whether we can return a boolean value if we cannot find the credentials we search for
