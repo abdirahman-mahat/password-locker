@@ -15,6 +15,7 @@ PasswordLocker is a python application that generates and saves passwords for va
 ***
 # Technologies Used
 * python3.6 shell
+* vs code
 ***
 # Specifications
 | Behavior        | Input           | Outcome  |
