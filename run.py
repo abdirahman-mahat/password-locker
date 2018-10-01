@@ -85,9 +85,11 @@ def main():
         elif short_code == 'dp':
             if display_user():
                 print('here are your users')
+                print('make a password for viewing your credentials')
+                ps = input()
                 print('password...')
                 password = input()
-                if password == '55':
+                if password == ps:
                     for user in display_user():
                         print(f'{user.name} {user.username}..{user.password}')
                         print('\n')
